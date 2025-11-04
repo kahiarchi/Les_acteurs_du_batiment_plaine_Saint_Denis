@@ -22,4 +22,91 @@ Données INSEE sur la population et le logement : https://www.insee.fr/fr/statis
 - Le territoire : https://data.seinesaintdenis.fr/explore/?sort=-title 
 - Association : https://ressources.seinesaintdenis.fr/Appel-a-projets-2024-en-faveur-des-habitants-des-quartiers-prioritaires-de-la
 [data_table.xlsx](https://github.com/user-attachments/files/23320020/data_table.xlsx)
-participation par 
+### table 01 - persone
+| ID | Nom | Âge | Genre |
+|----|-----|-----|-------|
+| 1  | Sam Bentounsi | 30 | M |
+| 2  | Bruno Maguer | 50 | M |
+| 3  | Association Union des Riverains | 1 | F |
+| 4  | Claire Dupont | 40 | F |
+| 5  | Jean Martin | 35 | M |
+| 6  | Sophie Leroy | 28 | F |
+| 7  | Paul Durand | 45 | M |
+| 8  | Marie Dubois | 32 | F |
+| 9  | Antoine Bernard | 38 | M |
+| 10 | Élodie Moreau | 27 | F |
+### table 02 - citoyen 
+| ID | Statut / Rôle | Description / Fonction | Référence |
+|----|----------------|------------------------|------------|
+| 1  | Habitant | Nouveau propriétaire en BRS – résidence Les Météores | 1.1 |
+| 2  | Professionnel | Président de réseau d’entreprises territoriales | 2 |
+| 3  | Actif associatif | Membre du comité de riverains Stade de France | 3 |
+| 4  | Habitant | Locataire à Plaine Commune | 4 |
+| 5  | Professionnel | Architecte urbaniste | 5 |
+| 6  | Actif associatif | Président d’association locale | 6 |
+| 7  | Habitant | Propriétaire d’un appartement | 7 |
+| 8  | Professionnel | Directeur d’entreprise immobilière | 8 |
+| 9  | Actif associatif | Membre d’association citoyenne | 9 |
+| 10 | Habitant | Résident du quartier des Mureaux | 10 |
+### table 03 - citoyenActif 
+| ID | Nom de l’association / collectif | Référence Citoyen |
+|----|----------------------------------|-------------------|
+| 1  | Comité Vigilance Plaine          | 3 |
+| 2  | Association Plaine Citoyenne     | 6 |
+| 3  | Réseau des habitants             | 9 |
+### table 04 - citoyenProfessionnel
+| ID | Fonction | Domaine | Référence Citoyen |
+|----|-----------|----------|-------------------|
+| 1  | Dirigeant | Développement territorial | 2 |
+| 2  | Architecte | Urbanisme | 5 |
+| 3  | Directeur | Immobilier | 8 |
+### table 05 - institutionPublique
+| ID | Nom de l’institution | Service / Domaine | Référence CitoyenProfessionnel |
+|----|-----------------------|-------------------|--------------------------------|
+| 1  | Plaine Commune Développement | Aménagement urbain | 1.1 |
+| 2  | Mairie de Saint-Denis | Urbanisme | 2 |
+| 3  | Service Habitat Plaine | Logement | 3 |
+### table 06 - acteurPrive
+| ID | Nom de l'acteur                  | Secteur d'activité             | Catégorie |
+|----|---------------------------------|-------------------------------|----------|
+| 1  | WO2 - Immobilier Bas Carbone     | Construction & bureau          | 1.1      |
+| 2  | Sogeprom                         | Immobilier résidentiel         | 2        |
+| 3  | Bouygues Construction            | Grands projets urbains         | 3        |
+### table 07 - projet
+| ID  | Nom du projet                          | Statut     | Localisation           |
+|-----|---------------------------------------|-----------|-----------------------|
+| 2   | Projet Bois Bas Carbone - Pôle siège GRDF | En cours  | La Plaine Saint-Denis |
+| 3   | Quartier du Canal                      | Planifié  | La Plaine Saint-Denis |
+| 4   | Réhabilitation Stade de France         | En cours  | La Plaine Saint-Denis |
+| 5   | ZAC Franc Moisin                        | Achevé    | La Plaine Saint-Denis |
+| 6   | Projet Pleyel                           | En cours  | La Plaine Saint-Denis |
+| 7   | Réaménagement gare Saint-Denis         | Planifié  | La Plaine Saint-Denis |
+| 8   | Extension ZAC Mairie                    | En cours  | La Plaine Saint-Denis |
+| 9   | Résidence sociale La Plaine            | Achevé    | La Plaine Saint-Denis |
+| 10  | Parc urbain Canal Saint-Denis          | Planifié  | La Plaine Saint-Denis |
+### table 08 - participation 
+| ID  | ID Projet | ID Acteur | Rôle                     |
+|-----|-----------|-----------|--------------------------|
+| 1   | 3         | 1.1       | Membre comité            |
+| 2   | 2         | 2         | Promoteur entreprise     |
+| 3   | 6         | 3         | Membre association       |
+| 4   | 9         | 4         | Consultant citoyen       |
+| 5   | 1         | 5         | Résident participant     |
+| 6   | 4         | 6         | Habitant suivi           |
+| 7   | 7         | 7         | Propriétaire suivi       |
+| 8   | 5         | 8         | Professionnel partenaire |
+| 9   | 8         | 9         | Promoteur                |
+| 10  | 10        | 10        | Habitant observateur     |
+### table 09 - Realisation
+| ID  | ID Acteur 1 | ID Acteur 2 | ID Rôle | Type d'intervention         |
+|-----|------------|------------|---------|----------------------------|
+| 1   | 1.1        | \N         | 1.2     | Maître d’ouvrage           |
+| 2   | \N         | 1          | 2       | Construction spécialisée bois |
+| 3   | 2          | \N         | 3       | Supervision                |
+| 4   | \N         | 2          | 4       | Construction résidentielle |
+| 5   | 3          | \N         | 5       | Pilotage                   |
+| 6   | \N         | 3          | 6       | Construction bureaux       |
+| 7   | 1          | \N         | 7       | Maîtrise d’ouvrage         |
+| 8   | \N         | 2          | 8       | Construction immobilière   |
+| 9   | 2          | \N         | 9       | Suivi                       |
+| 10  | \N         | 3          | 10      | Aménagement espaces        |
