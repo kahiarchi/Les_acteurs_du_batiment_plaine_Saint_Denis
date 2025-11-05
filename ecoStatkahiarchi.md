@@ -159,9 +159,11 @@ classDiagram
 Pour analyser la participation citoyenne dans les projets urbains au quartier de la plaine Saint Denis , plusieurs représentations peuvent être envisagées :
 - **Histogramme** pour comparer le nombre de citoyens selon leur statut ( habitant , professionnel , actif associatif )
 - ![Histogramme citoyens](histogramme_citoyens.png)
-- **Camembert** pour montrer la proportion de chaque acteur ( public , privé et citoyen ) 
+- **Camembert** pour montrer la proportion de chaque acteur ( public , privé et citoyen )
+- ![Camembert acteur](camembert_acteur.png)
 - **Carte interactive** pour localiser les projets participatifs dans le quartier ou la ville . 
 - **Graphique en barres empilées** pour visualiser la participation selon les types de projets ( culturels , educatifs , sportifs , détentes.....)
+-![Barres empilées](projet_participation.png) 
 ## 6_ INTERACTIONS ENTRE LES TABLES ET L'ENVIRONNEMENT 
 Les différentes tables représentent les acteurs et les dynamiques de participation citoyenne à la plaine commune  dont le quartier de la plaine fait partie .
 - La **table personne** constitue la base du modèle chaque individu est identifié par son age , son genre et son nom . 
