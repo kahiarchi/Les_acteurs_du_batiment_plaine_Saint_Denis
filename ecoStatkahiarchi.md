@@ -158,6 +158,7 @@ classDiagram
 ## 5_ REPRESENTATIONS DE DONNEES 
 Pour analyser la participation citoyenne dans les projets urbains au quartier de la plaine Saint Denis , plusieurs représentations peuvent être envisagées :
 - **Histogramme** pour comparer le nombre de citoyens selon leur statut ( habitant , professionnel , actif associatif )
+- ![Histogramme citoyens](histogramme_citoyens.png)
 - **Camembert** pour montrer la proportion de chaque acteur ( public , privé et citoyen ) 
 - **Carte interactive** pour localiser les projets participatifs dans le quartier ou la ville . 
 - **Graphique en barres empilées** pour visualiser la participation selon les types de projets ( culturels , educatifs , sportifs , détentes.....)
