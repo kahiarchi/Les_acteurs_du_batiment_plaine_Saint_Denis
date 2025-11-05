@@ -157,15 +157,15 @@ classDiagram
 ```
 ## 5_ REPRESENTATIONS DE DONNEES 
 Pour analyser la participation citoyenne dans les projets urbains au quartier de la plaine Saint Denis , plusieurs représentations peuvent être envisagées :
-**Histogramme** pour comparer le nombre de citoyens selon leur statut ( habitant , professionnel , actif associatif )
-**Camember** pour montrer la proportion de chaque acteur ( public , privé et citoyen ) 
-**Carte interactive** pour localiser les projets participatifs dans le quartier ou la ville . 
-**Graphique en barres empilées** pour visualiser la participation selon les types de projets ( culturels , educatifs , sportifs , détentes.....)
+- **Histogramme** pour comparer le nombre de citoyens selon leur statut ( habitant , professionnel , actif associatif )
+- **Camember** pour montrer la proportion de chaque acteur ( public , privé et citoyen ) 
+- **Carte interactive** pour localiser les projets participatifs dans le quartier ou la ville . 
+- **Graphique en barres empilées** pour visualiser la participation selon les types de projets ( culturels , educatifs , sportifs , détentes.....)
 ## 6_ INTERACTIONS ENTRE LES TABLES ET L'ENVIRONNEMENT 
 Les différentes tables représentent les acteurs et les dynamiques de participation citoyenne à la plaine commune  dont le quartier de la plaine fait partie .
-La **table personne** constitue la base du modèle chaque individu est identifié par son age , son genre et son nom . 
-La **table citoyen** relie ces personnes à un **statut social ou professionnel** indiquant leur niveau d'implication dans la vie locale . 
-Les tables **citoyenActif** et **citoyenProfessionnel** précisent les rôles spécifiques associatifs ou institutionnels des citoyens engagés .
-Les tables **institutionsPubliques** et **acteursPrivés** interviennent dans la réalisation des projets **table projets** qui sont à leur tour liés a la **table participation** illustrant la collaboration habitants , associations et structures professionnels . 
-La **table Réalisation** complète le modèle en suivant l'état d'avancement des projets .  
+- La **table personne** constitue la base du modèle chaque individu est identifié par son age , son genre et son nom . 
+- La **table citoyen** relie ces personnes à un **statut social ou professionnel** indiquant leur niveau d'implication dans la vie locale . 
+- Les tables **citoyenActif** et **citoyenProfessionnel** précisent les rôles spécifiques associatifs ou institutionnels des citoyens engagés .
+- Les tables **institutionsPubliques** et **acteursPrivés** interviennent dans la réalisation des projets **table projets** qui sont à leur tour liés a la **table participation** illustrant la collaboration habitants , associations et structures professionnels . 
+- La **table Réalisation** complète le modèle en suivant l'état d'avancement des projets .  
 
