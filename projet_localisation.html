@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Carte des projets participatifs – Saint-Denis</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <style>
+    #map { height: 600px; width: 90%; margin: auto; margin-top: 50px; }
+    body { font-family: Arial, sans-serif; text-align: center; background: #fafafa; }
+  </style>
+</head>
+<body>
+
+<h2>🗺️ Carte des projets participatifs à Saint-Denis</h2>
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+const map = L.map('map').setView([48.9244, 2.3570], 14);
+
+// Ajouter un fond de carte OpenStreetMap
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+// Charger les données CSV
+d3.csv("projets_localisation.csv").then(data => {
+  data.forEach(d => {
+    d.Latitude = +d.Latitude;
+    d.Longitude = +d.Longitude;
+    d.Nombre_Participants = +d.Nombre_Participants;
+
+    // Choisir la couleur selon le statut
+    let couleur = "blue";
+    if(d.Statut === "Planifié") couleur = "orange";
+    if(d.Statut === "Achevé") couleur = "green";
+
+    L.circleMarker([d.Latitude, d.Longitude], {
+      radius: 8 + d.Nombre_Participants, // taille proportionnelle au nombre de participants
+      color: couleur,
+      fillOpacity: 0.7
+    })
+    .bindPopup(`<b>${d.Nom_Projet}</b><br>Statut : ${d.Statut}<br>Participants : ${d.Nombre_Participants}`)
+    .addTo(map);
+  });
+});
+</script>
+
+</body>
+</html>
