@@ -1,4 +1,4 @@
-## 1_ LES SOURCES 
+## 1_ LES SOURCESDE DONNEES 
 Données INSEE sur la population et le logement : https://www.insee.fr/fr/statistiques
 - Données sur les équipements urbains : https://data.gouv.fr
 - Observation des projets urbains à Saint-Denis (notes personnelles et photos)
@@ -113,3 +113,6 @@ Données INSEE sur la population et le logement : https://www.insee.fr/fr/statis
 | 8   | \N         | 2          | 8       | Construction immobilière   |
 | 9   | 2          | \N         | 9       | Suivi                       |
 | 10  | \N         | 3          | 10      | Aménagement espaces        |
+## 4_ STRUCTURE VISUELLE 
+Le diagramme suivant montre les relations entre les différents acteurs du projet .
+
