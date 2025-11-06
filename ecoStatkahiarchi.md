@@ -169,7 +169,7 @@ Afin d'analyser la participation citoyenne dans les projets urbains au quartier 
 - **Graphique en barres empilées** pour visualiser la participation selon les types de projets ( culturels , educatifs , sportifs , détentes.....)
 -![Barres empilées](projet_participation.png)
 
-# OBSERVATIONS :
+** OBSERVATIONS :**
 ###  Nombre de citoyens par statut
 **Observation **
 - Les habitants représentent la majorité des participants.
@@ -191,7 +191,7 @@ Afin d'analyser la participation citoyenne dans les projets urbains au quartier 
 - Les projets participatifs se situent près des zones résidentielles et services publics, ce qui facilite la mobilisation des habitants.  
 - Les projets culturels et éducatifs créent des points d’interaction sociale et environnementale dans le quartier.  
 - La répartition spatiale des projets montre comment l’engagement citoyen influence directement l’aménagement urbain.
-### Conclusion
+## 7_ Conclusion
 - Les habitants sont les principaux participants, confirmant l’importance de la mobilisation locale.  
 - Les acteurs publics et privés apportent un soutien structurant et complémentaire.  
 - Les projets culturels et éducatifs génèrent le plus d’engagement citoyen.  
