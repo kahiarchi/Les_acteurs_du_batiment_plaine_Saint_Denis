@@ -1,8 +1,6 @@
 ## 1_ LES SOURCES DE DONNEES 
-Données INSEE sur la population et le logement : https://www.insee.fr/fr/statistiques
+- Données INSEE sur la population et le logement : https://www.insee.fr/fr/statistiques
 - Données sur les équipements urbains : https://data.gouv.fr
-- Observation des projets urbains à Saint-Denis (notes personnelles et photos)
-- Base de données sur les projets participatifs : https://www.diigo.com/user/luckysemiosis?query=%23ACEHN+%23statistiques
 - Territoire-de-projets-urbains : https://plaine-commune-developpement.fr
 - Territoire du quartier de la plaine : https://fr.wikipedia.org/wiki/La_Plaine_Saint-Denis 
 - Renouvellementurbain : https://odyssea-paris.com/renouvellement-urbain-plaine-saint-denis/
@@ -196,12 +194,4 @@ Afin d'analyser la participation citoyenne dans les projets urbains au quartier 
 - Les acteurs publics et privés apportent un soutien structurant et complémentaire.  
 - Les projets culturels et éducatifs génèrent le plus d’engagement citoyen.  
 - La localisation des projets met en évidence des zones à forte participation et d’autres à renforcer pour une couverture territoriale optimale.
-
-## 6_ INTERACTIONS ENTRE LES TABLES ET L'ENVIRONNEMENT 
-Les différentes tables représentent les acteurs et les dynamiques de participation citoyenne à la plaine commune  dont le quartier de la plaine fait partie .
-- La **table personne** constitue la base du modèle chaque individu est identifié par son age , son genre et son nom . 
-- La **table citoyen** relie ces personnes à un **statut social ou professionnel** indiquant leur niveau d'implication dans la vie locale . 
-- Les tables **citoyenActif** et **citoyenProfessionnel** précisent les rôles spécifiques associatifs ou institutionnels des citoyens engagés .
-- Les tables **institutionsPubliques** et **acteursPrivés** interviennent dans la réalisation des projets **table projets** qui sont à leur tour liés a la **table participation** illustrant la collaboration habitants , associations et structures professionnels . 
-- La **table Réalisation** complète le modèle en suivant l'état d'avancement des projets .  
 
