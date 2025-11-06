@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Carte des projets participatifs – La Plaine Saint-Denis</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+    }
+    h2 {
+      text-align: center;
+      margin: 20px 0;
+    }
+    #map {
+      width: 90%;
+      height: 600px;
+      margin: 0 auto 40px auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+<h2>🗺️ Carte des projets participatifs à La Plaine Saint-Denis</h2>
+<div id="map"></div>
+
+<script>
+// Initialiser la carte centrée sur La Plaine Saint-Denis
+const map = L.map('map').setView([48.922, 2.356], 14);
+
+// Ajouter fond de carte OpenStreetMap
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+// Charger les données CSV
+d3.csv("projets_carte.csv").then(data => {
+  data.forEach(d => {
+    // Ajouter un marqueur pour chaque projet
+    const marker = L.marker([+d.Latitude, +d.Longitude]).addTo(map);
+    marker.bindPopup(`<b>${d.Nom}</b><br>Statut: ${d.Statut}`);
+  });
+});
+</script>
+
+</body>
+</html>
