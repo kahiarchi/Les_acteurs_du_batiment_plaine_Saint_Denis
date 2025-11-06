@@ -155,8 +155,11 @@ classDiagram
      }
   
 ```
-## 5_ REPRESENTATIONS DE DONNEES 
-Pour analyser la participation citoyenne dans les projets urbains au quartier de la plaine Saint Denis , plusieurs représentations peuvent être envisagées :
+## 5_ REPRESENTATIONS ET ANALYSE DES DONNEES 
+
+Cette étude analyse la participation des citoyens, des acteurs publics et privés dans différents projets urbains à La Plaine Saint-Denis. Les visualisations suivantes permettent de comprendre la répartition des acteurs, le type de participation et la localisation des projets.
+
+Afin d'analyser la participation citoyenne dans les projets urbains au quartier de la plaine Saint Denis , nous avons envisagé les représentations suivantes  :
 - **Histogramme** pour comparer le nombre de citoyens selon leur statut ( habitant , professionnel , actif associatif )
 - ![Histogramme citoyens](histogramme_citoyens.png)
 - **Camembert** pour montrer la proportion de chaque acteur ( public , privé et citoyen )
@@ -164,7 +167,36 @@ Pour analyser la participation citoyenne dans les projets urbains au quartier de
 - **Carte interactive** pour localiser les projets participatifs dans le quartier ou la ville .
 - ![Carte projets](projet_localisation.jpg)
 - **Graphique en barres empilées** pour visualiser la participation selon les types de projets ( culturels , educatifs , sportifs , détentes.....)
--![Barres empilées](projet_participation.png) 
+-![Barres empilées](projet_participation.png)
+
+# OBSERVATIONS :
+###  Nombre de citoyens par statut
+**Observation **
+- Les habitants représentent la majorité des participants.
+- Les professionnels et acteurs associatifs sont également présents, mais en plus faible proportion.
+###  Répartition des acteurs (citoyens, publics, privés)
+**Observation **
+- Les citoyens constituent la plus grande part des acteurs.
+- Les acteurs publics et privés sont équilibrés, apportant un soutien institutionnel et économique aux projets.
+### Participation par type de projet et type d’acteur
+**Observation **
+- Les projets culturels et éducatifs attirent le plus de participation citoyenne.
+- Les professionnels interviennent surtout dans les projets économiques ou d’infrastructure.
+- Les acteurs associatifs sont engagés dans des projets citoyens et communautaires.
+### Localisation des projets participatifs à La Plaine Saint-Denis
+*Observation **
+- Les projets sont concentrés dans le centre de La Plaine Saint-Denis.
+- Cette localisation montre où la participation citoyenne est la plus forte et met en évidence des zones moins couvertes.
+## 6_ INTERACTIONS AVEC L'ENVIRONNEMENT 
+- Les projets participatifs se situent près des zones résidentielles et services publics, ce qui facilite la mobilisation des habitants.  
+- Les projets culturels et éducatifs créent des points d’interaction sociale et environnementale dans le quartier.  
+- La répartition spatiale des projets montre comment l’engagement citoyen influence directement l’aménagement urbain.
+### Conclusion
+- Les habitants sont les principaux participants, confirmant l’importance de la mobilisation locale.  
+- Les acteurs publics et privés apportent un soutien structurant et complémentaire.  
+- Les projets culturels et éducatifs génèrent le plus d’engagement citoyen.  
+- La localisation des projets met en évidence des zones à forte participation et d’autres à renforcer pour une couverture territoriale optimale.
+
 ## 6_ INTERACTIONS ENTRE LES TABLES ET L'ENVIRONNEMENT 
 Les différentes tables représentent les acteurs et les dynamiques de participation citoyenne à la plaine commune  dont le quartier de la plaine fait partie .
 - La **table personne** constitue la base du modèle chaque individu est identifié par son age , son genre et son nom . 
