@@ -161,7 +161,8 @@ Pour analyser la participation citoyenne dans les projets urbains au quartier de
 - ![Histogramme citoyens](histogramme_citoyens.png)
 - **Camembert** pour montrer la proportion de chaque acteur ( public , privé et citoyen )
 - ![Camembert acteur](camembert_acteur.png)
-- **Carte interactive** pour localiser les projets participatifs dans le quartier ou la ville . 
+- **Carte interactive** pour localiser les projets participatifs dans le quartier ou la ville .
+- ![Carte projets](images/projet_localisation.png) 
 - **Graphique en barres empilées** pour visualiser la participation selon les types de projets ( culturels , educatifs , sportifs , détentes.....)
 -![Barres empilées](projet_participation.png) 
 ## 6_ INTERACTIONS ENTRE LES TABLES ET L'ENVIRONNEMENT 
