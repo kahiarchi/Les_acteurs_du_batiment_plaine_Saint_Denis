@@ -1,16 +1,16 @@
 Nom du vocabulaire,Préfixe,URI,Thématique principale,Utilisation dans le projet
-DBpedia City,dbpedia-owl,http://dbpedia.org/ontology/city,Ville/Localité,Localiser les villes, quartiers et territoires dans l’étude urbaine
-LGDO City,lgdo,http://linkedgeodata.org/ontology/City,Ville/Localité,Identifier le quartier et ses caractéristiques géographiques
-DBpedia Urban Area,dbpedia-owl,http://dbpedia.org/ontology/urbanArea,Zone urbaine,Représenter les zones d’aménagement, densité urbaine, projets urbains
-OSR Urban Area,osr,http://contextus.net/ontology/ontomedia/core/space#Urban-Area,Zone urbaine,Décrire les quartiers, zones d’intervention ou projets urbains spécifiques
-GUFO Participation,gufo,http://purl.org/nemo/gufo#Participation,Participation citoyenne,Modéliser la participation des habitants dans les projets urbains
-FOAF Project,foaf,http://xmlns.com/foaf/0.1/Project,Projet collectif,Relier les projets aux acteurs sociaux et associations impliquées
-DBpedia Project,dbpedia-owl,http://dbpedia.org/ontology/Project,Projet urbain général,Décrire les projets urbains (réaménagement, construction, réhabilitation)
-DG Project,dg,https://w3id.org/dingo#Project,Projet + financement + acteurs,Modéliser la gouvernance, les acteurs et ressources des projets urbains
-FEA Citizen,fea,http://vocab.data.gov/def/fea#Citizen,Citoyen/Habitants,Identifier les habitants impliqués et leur statut dans les projets
-DPV Citizen,dpv,https://w3id.org/dpv#Citizen,Citoyen,Décrire les citoyens participants et les non-citoyens (droits, rôle)
-KM4C DigitalLocation,km4c,http://www.disit.org/km4city/schema#DigitalLocation,Outils numériques/Digital,Modéliser l’usage des technologies numériques pour la participation et information
-DPV DigitalSignatures,dpv,https://w3id.org/dpv#DigitalSignatures,Signatures numériques/Digital,Décrire la sécurité ou validation des interactions numériques
-HHT Territory,hht,https://w3id.org/HHT#Territory,Territoire,Identifier le territoire du quartier de La Plaine Saint-Denis
-TSN Territory,tsn,http://purl.org/net/tsn#Territory,Territoire,Représenter le territoire en termes sociaux et géographiques
-DBpedia Territory,dbpedia-owl,http://dbpedia.org/ontology/Territory,Territoire/Subdivision,Relier les projets et citoyens au territoire du quartier
+DBpedia City,dbpedia-owl,http://dbpedia.org/ontology/city,Ville/Localité,"Localiser les villes, quartiers et territoires dans l’étude urbaine"
+LGDO City,lgdo,http://linkedgeodata.org/ontology/City,Ville/Localité,"Identifier le quartier et ses caractéristiques géographiques"
+DBpedia Urban Area,dbpedia-owl,http://dbpedia.org/ontology/urbanArea,Zone urbaine,"Représenter les zones d’aménagement, densité urbaine, projets urbains"
+OSR Urban Area,osr,http://contextus.net/ontology/ontomedia/core/space#Urban-Area,Zone urbaine,"Décrire les quartiers, zones d’intervention ou projets urbains spécifiques"
+GUFO Participation,gufo,http://purl.org/nemo/gufo#Participation,Participation citoyenne,"Modéliser la participation des habitants dans les projets urbains"
+FOAF Project,foaf,http://xmlns.com/foaf/0.1/Project,Projet collectif,"Relier les projets aux acteurs sociaux et associations impliquées"
+DBpedia Project,dbpedia-owl,http://dbpedia.org/ontology/Project,Projet urbain général,"Décrire les projets urbains (réaménagement, construction, réhabilitation)"
+DG Project,dg,https://w3id.org/dingo#Project,Projet + financement + acteurs,"Modéliser la gouvernance, les acteurs et ressources des projets urbains"
+FEA Citizen,fea,http://vocab.data.gov/def/fea#Citizen,Citoyen/Habitants,"Identifier les habitants impliqués et leur statut dans les projets"
+DPV Citizen,dpv,https://w3id.org/dpv#Citizen,Citoyen,"Décrire les citoyens participants et les non-citoyens (droits, rôle)"
+KM4C DigitalLocation,km4c,http://www.disit.org/km4city/schema#DigitalLocation,Outils numériques/Digital,"Modéliser l’usage des technologies numériques pour la participation et information"
+DPV DigitalSignatures,dpv,https://w3id.org/dpv#DigitalSignatures,Signatures numériques/Digital,"Décrire la sécurité ou validation des interactions numériques"
+HHT Territory,hht,https://w3id.org/HHT#Territory,Territoire,"Identifier le territoire du quartier de La Plaine Saint-Denis"
+TSN Territory,tsn,http://purl.org/net/tsn#Territory,Territoire,"Représenter le territoire en termes sociaux et géographiques"
+DBpedia Territory,dbpedia-owl,http://dbpedia.org/ontology/Territory,Territoire/Subdivision,"Relier les projets et citoyens au territoire du quartier"
