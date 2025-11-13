@@ -1,1 +1,73 @@
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix lgdo: <http://linkedgeodata.org/ontology/> .
+@prefix osr: <http://contextus.net/ontology/ontomedia/core/space#> .
+@prefix gufo: <http://purl.org/nemo/gufo#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dg: <https://w3id.org/dingo#> .
+@prefix fea: <http://vocab.data.gov/def/fea#> .
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix km4c: <http://www.disit.org/km4city/schema#> .
+@prefix hht: <https://w3id.org/HHT#> .
+@prefix tsn: <http://purl.org/net/tsn#> .
+
+
+dbpedia-owl:city a rdfs:Class ;
+    rdfs:label "City"@en ;
+    rdfs:comment "Ville ou localité urbaine"@fr .
+
+lgdo:City a rdfs:Class ;
+    rdfs:label "City"@en ;
+    rdfs:comment "Localité issue de LinkedGeoData"@fr .
+
+dbpedia-owl:urbanArea a rdfs:Class ;
+    rdfs:label "Urban Area"@en ;
+    rdfs:comment "Zone urbaine définie par DBpedia"@fr .
+
+osr:Urban-Area a rdfs:Class ;
+    rdfs:label "Urban Area"@en ;
+    rdfs:comment "Zone d’intervention ou quartier urbain"@fr .
+
+gufo:Participation a rdfs:Class ;
+    rdfs:label "Participation"@en ;
+    rdfs:comment "Participation citoyenne dans les projets urbains"@fr .
+
+foaf:Project a rdfs:Class ;
+    rdfs:label "Project"@en ;
+    rdfs:comment "Projet collectif ou social"@fr .
+
+dbpedia-owl:Project a rdfs:Class ;
+    rdfs:label "Project"@en ;
+    rdfs:comment "Projet urbain général (réhabilitation, aménagement…)"@fr .
+
+dg:Project a rdfs:Class ;
+    rdfs:label "Project"@en ;
+    rdfs:comment "Projet impliquant gouvernance et financement"@fr .
+
+fea:Citizen a rdfs:Class ;
+    rdfs:label "Citizen"@en ;
+    rdfs:comment "Habitant ou citoyen impliqué dans les projets"@fr .
+
+dpv:Citizen a rdfs:Class ;
+    rdfs:label "Citizen"@en ;
+    rdfs:comment "Citoyen ou non-citoyen participant"@fr .
+
+km4c:DigitalLocation a rdfs:Class ;
+    rdfs:label "Digital Location"@en ;
+    rdfs:comment "Localisation numérique ou outil digital"@fr .
+
+dpv:DigitalSignatures a rdfs:Class ;
+    rdfs:label "Digital Signatures"@en ;
+    rdfs:comment "Sécurité et validation des interactions numériques"@fr .
+
+hht:Territory a rdfs:Class ;
+    rdfs:label "Territory"@en ;
+    rdfs:comment "Territoire du quartier La Plaine Saint-Denis"@fr .
+
+tsn:Territory a rdfs:Class ;
+    rdfs:label "Territory"@en ;
+    rdfs:comment "Représentation sociale et géographique du territoire"@fr .
+
+dbpedia-owl:Territory a rdfs:Class ;
+    rdfs:label "Territory"@en ;
+    rdfs:comment "Subdivision ou entité territoriale"@fr .
 
