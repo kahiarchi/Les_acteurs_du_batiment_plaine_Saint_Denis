@@ -10,7 +10,6 @@
 @prefix hht: <https://w3id.org/HHT#> .
 @prefix tsn: <http://purl.org/net/tsn#> .
 
-
 dbpedia-owl:city a rdfs:Class ;
     rdfs:label "City"@en ;
     rdfs:comment "Ville ou localité urbaine"@fr .
@@ -70,4 +69,3 @@ tsn:Territory a rdfs:Class ;
 dbpedia-owl:Territory a rdfs:Class ;
     rdfs:label "Territory"@en ;
     rdfs:comment "Subdivision ou entité territoriale"@fr .
-
