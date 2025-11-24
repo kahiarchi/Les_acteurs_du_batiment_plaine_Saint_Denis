@@ -4,97 +4,117 @@
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
+##########################################################
+# CLASSES PRINCIPALES
+##########################################################
 
-# Classe principale
-bat:Batiment a owl:Class ;
-    rdfs:label "Bâtiment"@fr ;
-    rdfs:comment "Un bâtiment ou édifice faisant partie du territoire étudié."@fr .
+bat:City a owl:Class ;
+    rdfs:label "Ville / Localité"@fr ;
+    rdfs:comment "Ville ou quartier étudié (ex : La Plaine Saint-Denis)."@fr .
 
-bat:Piece a owl:Class ;
-    rdfs:label "Pièce"@fr ;
-    rdfs:comment "Un espace intérieur faisant partie d’un bâtiment."@fr .
+bat:UrbanArea a owl:Class ;
+    rdfs:label "Zone urbaine"@fr ;
+    rdfs:comment "Zone d’aménagement, densité urbaine, secteur de projet."@fr .
 
-bat:Materiau a owl:Class ;
-    rdfs:label "Matériau"@fr ;
-    rdfs:comment "Un matériau utilisé dans la construction d’un bâtiment ou d’une pièce."@fr .
+bat:Project a owl:Class ;
+    rdfs:label "Projet urbain"@fr ;
+    rdfs:comment "Projet urbain ou architectural (réaménagement, construction…)."@fr .
 
-bat:Acteur a owl:Class ;
-    rdfs:label "Acteur"@fr ;
-    rdfs:comment "Une personne ou entité liée au bâtiment (architecte, promoteur, résident, institution…)."@fr .
+bat:Participation a owl:Class ;
+    rdfs:label "Participation citoyenne"@fr ;
+    rdfs:comment "Processus de participation des habitants aux projets urbains."@fr .
 
-bat:Projet a owl:Class ;
-    rdfs:label "Projet"@fr ;
-    rdfs:comment "Un projet urbain ou architectural impliquant un ou plusieurs acteurs."@fr .
+bat:Citizen a owl:Class ;
+    rdfs:label "Citoyen / Habitant"@fr ;
+    rdfs:comment "Habitant ou usager impliqué dans le quartier."@fr .
+
+bat:Territory a owl:Class ;
+    rdfs:label "Territoire"@fr ;
+    rdfs:comment "Territoire du quartier ou sous-secteur de la Plaine Saint-Denis."@fr .
 
 
+##########################################################
 # PROPRIÉTÉS D’OBJET (relations entre entités)
+##########################################################
 
-bat:comportePiece a owl:ObjectProperty ;
-    rdfs:label "comporte une pièce"@fr ;
-    rdfs:domain bat:Batiment ;
-    rdfs:range bat:Piece ;
-    rdfs:comment "Indique qu’un bâtiment contient une pièce."@fr .
+bat:locatedIn a owl:ObjectProperty ;
+    rdfs:label "est situé dans"@fr ;
+    rdfs:domain bat:City ;
+    rdfs:range bat:Territory ;
+    rdfs:comment "Une ville ou un quartier est situé dans un territoire."@fr .
 
-bat:utiliseMateriau a owl:ObjectProperty ;
-    rdfs:label "utilise un matériau"@fr ;
-    rdfs:domain bat:Batiment ;
-    rdfs:range bat:Materiau ;
-    rdfs:comment "Indique les matériaux utilisés dans le bâtiment."@fr .
+bat:containsArea a owl:ObjectProperty ;
+    rdfs:label "contient une zone"@fr ;
+    rdfs:domain bat:City ;
+    rdfs:range bat:UrbanArea ;
+    rdfs:comment "Liens entre la ville et ses zones urbaines."@fr .
 
-bat:participeA a owl:ObjectProperty ;
+bat:concernsArea a owl:ObjectProperty ;
+    rdfs:label "concerne la zone"@fr ;
+    rdfs:domain bat:Project ;
+    rdfs:range bat:UrbanArea ;
+    rdfs:comment "Un projet touche ou modifie une zone urbaine."@fr .
+
+bat:involvesCitizen a owl:ObjectProperty ;
+    rdfs:label "implique un citoyen"@fr ;
+    rdfs:domain bat:Participation ;
+    rdfs:range bat:Citizen ;
+    rdfs:comment "Un processus de participation implique un habitant."@fr .
+
+bat:relatedToProject a owl:ObjectProperty ;
+    rdfs:label "lié au projet"@fr ;
+    rdfs:domain bat:Participation ;
+    rdfs:range bat:Project ;
+    rdfs:comment "Participation en lien avec un projet urbain."@fr .
+
+bat:participatesIn a owl:ObjectProperty ;
     rdfs:label "participe à"@fr ;
-    rdfs:domain bat:Acteur ;
-    rdfs:range bat:Projet ;
-    rdfs:comment "Relation entre un acteur et un projet."@fr .
+    rdfs:domain bat:Citizen ;
+    rdfs:range bat:Project ;
+    rdfs:comment "Un citoyen participe à un projet."@fr .
 
-bat:appartientA a owl:ObjectProperty ;
-    rdfs:label "appartient à"@fr ;
-    rdfs:domain bat:Piece ;
-    rdfs:range bat:Batiment ;
-    rdfs:comment "Relie une pièce au bâtiment auquel elle appartient."@fr .
+bat:usesDigitalTool a owl:ObjectProperty ;
+    rdfs:label "utilise un outil numérique"@fr ;
+    rdfs:domain bat:Participation ;
+    rdfs:range bat:DigitalTool ;
+    rdfs:comment "Lien entre participation et outils numériques."@fr .
 
-bat:evalueBatiment a owl:ObjectProperty ;
-    rdfs:label "évalue le bâtiment"@fr ;
-    rdfs:domain bat:Acteur ;
-    rdfs:range bat:Batiment ;
-    rdfs:comment "Un acteur donne un avis ou une évaluation sur un bâtiment."@fr .
+bat:DigitalTool a owl:Class ;
+    rdfs:label "Outil numérique"@fr ;
+    rdfs:comment "Outil numérique utilisé pour la participation citoyenne (plateforme, carte interactive…)."@fr .
 
 
+##########################################################
 # PROPRIÉTÉS DE DONNÉES (descriptions textuelles ou numériques)
+##########################################################
 
+bat:projectName a owl:DatatypeProperty ;
+    rdfs:label "nom du projet"@fr ;
+    rdfs:domain bat:Project ;
+    rdfs:range xsd:string .
 
-bat:niveau a owl:DatatypeProperty ;
-    rdfs:label "niveau"@fr ;
-    rdfs:domain bat:Piece ;
+bat:projectYear a owl:DatatypeProperty ;
+    rdfs:label "année du projet"@fr ;
+    rdfs:domain bat:Project ;
+    rdfs:range xsd:gYear .
+
+bat:citizenName a owl:DatatypeProperty ;
+    rdfs:label "nom du citoyen"@fr ;
+    rdfs:domain bat:Citizen ;
+    rdfs:range xsd:string .
+
+bat:participationType a owl:DatatypeProperty ;
+    rdfs:label "type de participation"@fr ;
+    rdfs:domain bat:Participation ;
     rdfs:range xsd:string ;
-    rdfs:comment "Étage ou niveau où se situe la pièce."@fr .
+    rdfs:comment "Ex : atelier de quartier, concertation numérique, enquête publique…"@fr .
 
-bat:surface a owl:DatatypeProperty ;
-    rdfs:label "surface (m²)"@fr ;
-    rdfs:domain bat:Piece ;
-    rdfs:range xsd:decimal ;
-    rdfs:comment "Surface d’une pièce en mètres carrés."@fr .
-
-bat:anneeConstruction a owl:DatatypeProperty ;
-    rdfs:label "année de construction"@fr ;
-    rdfs:domain bat:Batiment ;
-    rdfs:range xsd:gYear ;
-    rdfs:comment "Année de construction du bâtiment."@fr .
-
-bat:nom a owl:DatatypeProperty ;
-    rdfs:label "nom"@fr ;
-    rdfs:domain bat:Acteur ;
-    rdfs:range xsd:string ;
-    rdfs:comment "Nom d’un acteur (personne ou institution)."@fr .
-
-bat:role a owl:DatatypeProperty ;
-    rdfs:label "rôle"@fr ;
-    rdfs:domain bat:Acteur ;
-    rdfs:range xsd:string ;
-    rdfs:comment "Rôle ou fonction de l’acteur (architecte, promoteur, résident…)."@fr .
+bat:toolName a owl:DatatypeProperty ;
+    rdfs:label "nom de l’outil numérique"@fr ;
+    rdfs:domain bat:DigitalTool ;
+    rdfs:range xsd:string .
 
 bat:description a owl:DatatypeProperty ;
     rdfs:label "description"@fr ;
-    rdfs:domain bat:Batiment ;
     rdfs:range xsd:string ;
-    rdfs:comment "Description générale d’un bâtiment."@fr .
+    rdfs:comment "Description générale."@fr .
