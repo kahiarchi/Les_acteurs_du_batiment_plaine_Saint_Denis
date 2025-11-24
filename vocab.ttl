@@ -1,71 +1,100 @@
-@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
-@prefix lgdo: <http://linkedgeodata.org/ontology/> .
-@prefix osr: <http://contextus.net/ontology/ontomedia/core/space#> .
-@prefix gufo: <http://purl.org/nemo/gufo#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix dg: <https://w3id.org/dingo#> .
-@prefix fea: <http://vocab.data.gov/def/fea#> .
-@prefix dpv: <https://w3id.org/dpv#> .
-@prefix km4c: <http://www.disit.org/km4city/schema#> .
-@prefix hht: <https://w3id.org/HHT#> .
-@prefix tsn: <http://purl.org/net/tsn#> .
+@prefix bat: <http://example.org/bat/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
-dbpedia-owl:city a rdfs:Class ;
-    rdfs:label "City"@en ;
-    rdfs:comment "Ville ou localité urbaine"@fr .
 
-lgdo:City a rdfs:Class ;
-    rdfs:label "City"@en ;
-    rdfs:comment "Localité issue de LinkedGeoData"@fr .
+# Classe principale
+bat:Batiment a owl:Class ;
+    rdfs:label "Bâtiment"@fr ;
+    rdfs:comment "Un bâtiment ou édifice faisant partie du territoire étudié."@fr .
 
-dbpedia-owl:urbanArea a rdfs:Class ;
-    rdfs:label "Urban Area"@en ;
-    rdfs:comment "Zone urbaine définie par DBpedia"@fr .
+bat:Piece a owl:Class ;
+    rdfs:label "Pièce"@fr ;
+    rdfs:comment "Un espace intérieur faisant partie d’un bâtiment."@fr .
 
-osr:Urban-Area a rdfs:Class ;
-    rdfs:label "Urban Area"@en ;
-    rdfs:comment "Zone d’intervention ou quartier urbain"@fr .
+bat:Materiau a owl:Class ;
+    rdfs:label "Matériau"@fr ;
+    rdfs:comment "Un matériau utilisé dans la construction d’un bâtiment ou d’une pièce."@fr .
 
-gufo:Participation a rdfs:Class ;
-    rdfs:label "Participation"@en ;
-    rdfs:comment "Participation citoyenne dans les projets urbains"@fr .
+bat:Acteur a owl:Class ;
+    rdfs:label "Acteur"@fr ;
+    rdfs:comment "Une personne ou entité liée au bâtiment (architecte, promoteur, résident, institution…)."@fr .
 
-foaf:Project a rdfs:Class ;
-    rdfs:label "Project"@en ;
-    rdfs:comment "Projet collectif ou social"@fr .
+bat:Projet a owl:Class ;
+    rdfs:label "Projet"@fr ;
+    rdfs:comment "Un projet urbain ou architectural impliquant un ou plusieurs acteurs."@fr .
 
-dbpedia-owl:Project a rdfs:Class ;
-    rdfs:label "Project"@en ;
-    rdfs:comment "Projet urbain général (réhabilitation, aménagement…)"@fr .
 
-dg:Project a rdfs:Class ;
-    rdfs:label "Project"@en ;
-    rdfs:comment "Projet impliquant gouvernance et financement"@fr .
+# PROPRIÉTÉS D’OBJET (relations entre entités)
 
-fea:Citizen a rdfs:Class ;
-    rdfs:label "Citizen"@en ;
-    rdfs:comment "Habitant ou citoyen impliqué dans les projets"@fr .
+bat:comportePiece a owl:ObjectProperty ;
+    rdfs:label "comporte une pièce"@fr ;
+    rdfs:domain bat:Batiment ;
+    rdfs:range bat:Piece ;
+    rdfs:comment "Indique qu’un bâtiment contient une pièce."@fr .
 
-dpv:Citizen a rdfs:Class ;
-    rdfs:label "Citizen"@en ;
-    rdfs:comment "Citoyen ou non-citoyen participant"@fr .
+bat:utiliseMateriau a owl:ObjectProperty ;
+    rdfs:label "utilise un matériau"@fr ;
+    rdfs:domain bat:Batiment ;
+    rdfs:range bat:Materiau ;
+    rdfs:comment "Indique les matériaux utilisés dans le bâtiment."@fr .
 
-km4c:DigitalLocation a rdfs:Class ;
-    rdfs:label "Digital Location"@en ;
-    rdfs:comment "Localisation numérique ou outil digital"@fr .
+bat:participeA a owl:ObjectProperty ;
+    rdfs:label "participe à"@fr ;
+    rdfs:domain bat:Acteur ;
+    rdfs:range bat:Projet ;
+    rdfs:comment "Relation entre un acteur et un projet."@fr .
 
-dpv:DigitalSignatures a rdfs:Class ;
-    rdfs:label "Digital Signatures"@en ;
-    rdfs:comment "Sécurité et validation des interactions numériques"@fr .
+bat:appartientA a owl:ObjectProperty ;
+    rdfs:label "appartient à"@fr ;
+    rdfs:domain bat:Piece ;
+    rdfs:range bat:Batiment ;
+    rdfs:comment "Relie une pièce au bâtiment auquel elle appartient."@fr .
 
-hht:Territory a rdfs:Class ;
-    rdfs:label "Territory"@en ;
-    rdfs:comment "Territoire du quartier La Plaine Saint-Denis"@fr .
+bat:evalueBatiment a owl:ObjectProperty ;
+    rdfs:label "évalue le bâtiment"@fr ;
+    rdfs:domain bat:Acteur ;
+    rdfs:range bat:Batiment ;
+    rdfs:comment "Un acteur donne un avis ou une évaluation sur un bâtiment."@fr .
 
-tsn:Territory a rdfs:Class ;
-    rdfs:label "Territory"@en ;
-    rdfs:comment "Représentation sociale et géographique du territoire"@fr .
 
-dbpedia-owl:Territory a rdfs:Class ;
-    rdfs:label "Territory"@en ;
-    rdfs:comment "Subdivision ou entité territoriale"@fr .
+# PROPRIÉTÉS DE DONNÉES (descriptions textuelles ou numériques)
+
+
+bat:niveau a owl:DatatypeProperty ;
+    rdfs:label "niveau"@fr ;
+    rdfs:domain bat:Piece ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Étage ou niveau où se situe la pièce."@fr .
+
+bat:surface a owl:DatatypeProperty ;
+    rdfs:label "surface (m²)"@fr ;
+    rdfs:domain bat:Piece ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "Surface d’une pièce en mètres carrés."@fr .
+
+bat:anneeConstruction a owl:DatatypeProperty ;
+    rdfs:label "année de construction"@fr ;
+    rdfs:domain bat:Batiment ;
+    rdfs:range xsd:gYear ;
+    rdfs:comment "Année de construction du bâtiment."@fr .
+
+bat:nom a owl:DatatypeProperty ;
+    rdfs:label "nom"@fr ;
+    rdfs:domain bat:Acteur ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Nom d’un acteur (personne ou institution)."@fr .
+
+bat:role a owl:DatatypeProperty ;
+    rdfs:label "rôle"@fr ;
+    rdfs:domain bat:Acteur ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Rôle ou fonction de l’acteur (architecte, promoteur, résident…)."@fr .
+
+bat:description a owl:DatatypeProperty ;
+    rdfs:label "description"@fr ;
+    rdfs:domain bat:Batiment ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Description générale d’un bâtiment."@fr .
