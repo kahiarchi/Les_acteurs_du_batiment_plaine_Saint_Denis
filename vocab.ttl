@@ -4,9 +4,7 @@
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 
-##########################################################
 # CLASSES PRINCIPALES
-##########################################################
 
 bat:City a owl:Class ;
     rdfs:label "Ville / Localité"@fr ;
@@ -33,9 +31,7 @@ bat:Territory a owl:Class ;
     rdfs:comment "Territoire du quartier ou sous-secteur de la Plaine Saint-Denis."@fr .
 
 
-##########################################################
 # PROPRIÉTÉS D’OBJET (relations entre entités)
-##########################################################
 
 bat:locatedIn a owl:ObjectProperty ;
     rdfs:label "est situé dans"@fr ;
@@ -84,9 +80,7 @@ bat:DigitalTool a owl:Class ;
     rdfs:comment "Outil numérique utilisé pour la participation citoyenne (plateforme, carte interactive…)."@fr .
 
 
-##########################################################
 # PROPRIÉTÉS DE DONNÉES (descriptions textuelles ou numériques)
-##########################################################
 
 bat:projectName a owl:DatatypeProperty ;
     rdfs:label "nom du projet"@fr ;
