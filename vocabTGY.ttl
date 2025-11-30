@@ -25,6 +25,7 @@ local:relatedToProject a owl:DatatypeProperty ;
     rdfs:range xsd:string .
 
 # ITEMS
+
 # Atelier de quartier
 local:AtelierQuartier a local:Participation ;
     rdfs:label "Atelier de quartier"@fr ;
