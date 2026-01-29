@@ -1,3 +1,4 @@
+```mermaid
 gantt
     dateFormat  YYYY-MM-DD
     title Participation Citoyenne - Master 2 Humanites Numeriques
@@ -27,3 +28,4 @@ gantt
     Diapo 12 : Conclusion & Ouverture :t10, 2026-02-25, 2026-03-10
     Finalisation du rapport          :crit, t11, 2026-03-10, 2026-03-25
     PRESENTATION FINALE              :crit, milestone, 2026-03-31, 0d
+```
