@@ -2,8 +2,7 @@
 gantt
     dateFormat  YYYY-MM-DD
     title Participation Citoyenne - Master 2 Humanites Numeriques
-    axisFormat  %d/%m
-    tickInterval 1week
+    
     excludes    weekends
 
     section 1. CADRAGE & MODELE (S1)
