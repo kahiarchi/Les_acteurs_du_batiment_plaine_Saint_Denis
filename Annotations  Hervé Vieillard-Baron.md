@@ -41,9 +41,9 @@ Vieillard-Baron souligne que le redressement de la Plaine n’a pas été sponta
 3. Le paradoxe de la métropolisation : une "ville à deux vitesses"
 L'analyse de la période post-1998 (Stade de France, sièges sociaux SFR/Orange) révèle une contradiction métropolitaine majeure. Si le dynamisme économique est indéniable, il crée un "discours décalé" par rapport à la réalité des résidents historiques :
 
-L'exclusion par l'emploi : Les nouvelles entreprises tertiaires s'installent avec leurs propres salariés, laissant les habitants locaux, souvent peu qualifiés ou issus de l'immigration, en marge du marché du travail.
+   L'exclusion par l'emploi : Les nouvelles entreprises tertiaires s'installent avec leurs propres salariés, laissant les habitants locaux, souvent peu qualifiés ou issus de l'immigration, en marge    du marché du travail.
 
-L'exclusion par le logement : Le défi est passé de "l'envie de rester" (1990) au "moyen de se maintenir" (2011) face à une explosion des prix de l'immobilier (+300% en dix ans).
+   L'exclusion par le logement : Le défi est passé de "l'envie de rester" (1990) au "moyen de se maintenir" (2011) face à une explosion des prix de l'immobilier (+300% en dix ans).
 
 4. Conclusion : La maîtrise des équilibres et le conflit des temporalités
 L'auteur conclut que l'enjeu actuel n'est plus l'aménagement physique du territoire, mais la gestion des temporalités. Il existe un heurtoir entre le temps "volatil" des activités économiques et l'urgence du quotidien des ménages précaires. Vieillard-Baron appelle à une "maîtrise des équilibres sociaux" pour éviter que la Plaine ne devienne une simple vitrine métropolitaine peuplée d'"îlots ghettoïsés" en marge du progrès.
